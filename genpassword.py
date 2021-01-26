@@ -11,7 +11,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
     lword = [0]
     for i in range(mc):
         lword += [0]
-     
+
     for i1 in range(len(wlc)):
         for i2 in range(len(wlc)):
             for i3 in range(len(wlc)):
@@ -27,7 +27,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
                                                     for i13 in range(len(wlc)):
                                                         for i14 in range(len(wlc)):
                                                             for i15 in range(len(wlc)):
-                                                                if int(maxchar) == 1 :
+                                                                if int(maxchar) == 1:
                                                                     word = wlc[i15]
                                                                 if int(maxchar) == 2 :
                                                                     word = wlc[i14] + wlc[i15]
