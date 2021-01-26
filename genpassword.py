@@ -29,7 +29,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
                                                             for i15 in range(len(wlc)):
                                                                 if int(maxchar) == 1:
                                                                     word = wlc[i15]
-                                                                if int(maxchar) == 2 :
+                                                                if int(maxchar) == 2:
                                                                     word = wlc[i14] + wlc[i15]
                                                                 if int(maxchar) == 3 :
                                                                     word = wlc[i13] + wlc[i14] + wlc[i15]
