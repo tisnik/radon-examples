@@ -31,7 +31,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
                                                                     word = wlc[i15]
                                                                 if int(maxchar) == 2:
                                                                     word = wlc[i14] + wlc[i15]
-                                                                if int(maxchar) == 3 :
+                                                                if int(maxchar) == 3:
                                                                     word = wlc[i13] + wlc[i14] + wlc[i15]
   
                                                                 if int(maxchar) == 14 :
