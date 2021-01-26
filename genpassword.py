@@ -10,7 +10,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
     mc = int(maxchar) - 1
     lword = [0]
     for i in range(mc):
-        lword += [0]  
+        lword += [0]
      
     for i1 in range(len(wlc)):
         for i2 in range(len(wlc)):
