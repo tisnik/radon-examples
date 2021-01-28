@@ -15,4 +15,4 @@ def vporadi(x, y, z):
         if (y < x):
             print(z, y, x)
         else:
-            print(z, x,y)
+            print(z, x, y)
