@@ -12,7 +12,7 @@ def vporadi(x, y, z):
         else:
             print(y, z, x)
     if (z < y) and (z < x):
-        if (y<x):
+        if (y < x):
             print(z,y,x)
         else:
             print(z,x,y)
