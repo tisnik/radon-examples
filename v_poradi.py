@@ -1,6 +1,6 @@
 # taken from http://hovnokod.cz/2744
 
-def vporadi(x,y,z):
+def vporadi(x, y,z):
     if (x<y) and (x<z):
         if (y<z):
             print(x,y,z)
