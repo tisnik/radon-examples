@@ -6,7 +6,7 @@ def vporadi(x, y, z):
             print(x, y, z)
         else:
             print(x, z, y)
-    if (y<x) and (y<z):
+    if (y < x) and (y<z):
         if (x<z):
             print(y,x,z)
         else:
