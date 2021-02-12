@@ -46,7 +46,7 @@ class DxfImporter:
         }
 
     def dxf_entry(self, fin):
-        '''Generate pair dxf_code + dxf_data for each iteration.'''
+        """Generate pair dxf_code + dxf_data for each iteration."""
         while True:
             line1 = fin.readline()
             line2 = fin.readline()
@@ -57,7 +57,7 @@ class DxfImporter:
             yield code, data
 
     def init_import(self):
-        '''Initialize the object state before import.'''
+        """Initialize the object state before import."""
         self.state = DxfReaderState.BEGINNING
         self.entity_type = DrawingEntityType.UNKNOWN
         self.blockName = None
@@ -70,7 +70,7 @@ class DxfImporter:
         self.entities = []
 
     def import_dxf(self):
-        '''Import the DXF file and return structure containing all entities.'''
+        """Import the DXF file and return structure containing all entities."""
         self.init_import()
 
         with open(self.filename) as fin:
@@ -86,7 +86,7 @@ class DxfImporter:
         return drawing
 
     def process_beginning(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 0:
             if data == "SECTION":
                 self.state = DxfReaderState.BEGINNING_SECTION
@@ -101,7 +101,7 @@ class DxfImporter:
                             "BEGINNING".format(c=code))
 
     def process_beginning_section(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 2:
             if data == "HEADER":
                 self.state = DxfReaderState.SECTION_HEADER
@@ -126,21 +126,21 @@ class DxfImporter:
                             "BEGINNING_SECTION".format(c=code))
 
     def process_section_header(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 0:
             if data == "ENDSEC":
                 self.state = DxfReaderState.BEGINNING
                 print("    end section header")
 
     def process_section_tables(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 0:
             if data == "ENDSEC":
                 self.state = DxfReaderState.BEGINNING
                 print("    end section tables")
 
     def process_section_blocks(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 0:
             if data == "BLOCK":
                 self.state = DxfReaderState.SECTION_BLOCK
@@ -150,7 +150,7 @@ class DxfImporter:
                 print("    end section blocks")
 
     def process_section_block(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 0:
             if data == "ENDBLK":
                 print("        end block")
@@ -161,7 +161,7 @@ class DxfImporter:
             print("        begin block '{b}'".format(b=self.blockName))
 
     def process_section_entities(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 0:
             if data == "LINE":
                 self.state = DxfReaderState.ENTITY
@@ -177,13 +177,13 @@ class DxfImporter:
                 self.entityType = DrawingEntityType.TEXT
 
     def process_section_objects(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 0:
             if data == "ENDSEC":
                 print("    end section objects")
 
     def process_entity(self, code, data):
-        '''Part of the DXF import state machine.'''
+        """Part of the DXF import state machine."""
         if code == 8:
             self.layer = data
         elif code == 10:
