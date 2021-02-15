@@ -54,7 +54,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
                                                                     print(word)
 
                                                                 txtfile.writelines(word + "\n")
- 
+
                                                                 i = 0
                                                                 end = 0
                                                                 if int(List) == 1 :
