@@ -46,9 +46,9 @@ def genpassword(wlc, maxchar, txt, List, verbose):
 
                                                                 if int(maxchar) == 15:
                                                                     word = wlc[i1] + wlc[i2] + wlc[i3] + wlc[i4] \
-                                                                    + wlc[i5] + wlc[i6] + wlc[i7] + wlc[i8] + wlc[i9] \
-                                                                    + wlc[i10] + wlc[i11] + wlc[i12] + wlc[i13] \
-                                                                    + wlc[i14] + wlc[i15]
+                                                                       + wlc[i5] + wlc[i6] + wlc[i7] + wlc[i8] + wlc[i9] \
+                                                                       + wlc[i10] + wlc[i11] + wlc[i12] + wlc[i13] \
+                                                                       + wlc[i14] + wlc[i15]
                                                                                                 
                                                                 if int(verbose) == 1:
                                                                     print(word)
