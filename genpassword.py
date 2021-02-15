@@ -57,7 +57,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
 
                                                                 i = 0
                                                                 end = 0
-                                                                if int(List) == 1 :
+                                                                if int(List) == 1:
                                                                     for i in range(len(word)):
                                                                         lword[i] = "9"
                                                                     if str(lword) == str(list(word)):
