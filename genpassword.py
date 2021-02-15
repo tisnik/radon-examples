@@ -62,7 +62,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
                                                                         lword[i] = "9"
                                                                     if str(lword) == str(list(word)):
                                                                         end = 1
-                                                                 
+
                                                                 if end == 1: break
                                                             if end == 1: break
                                                         if end == 1: break
