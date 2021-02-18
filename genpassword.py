@@ -60,7 +60,7 @@ def genpassword(wlc, maxchar, txt, List, verbose):
                                                                 if int(List) == 1:
                                                                     for i in range(len(word)):
                                                                         lword[i] = "9"
-                                                                    if str(lword) == str(list(word)):
+                                                                    if str(lword) == str(list(word)):  # noqa: E501
                                                                         end = 1
 
                                                                 if end == 1:
