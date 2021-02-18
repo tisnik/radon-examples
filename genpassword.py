@@ -64,7 +64,8 @@ def genpassword(wlc, maxchar, txt, List, verbose):
                                                                         end = 1
 
                                                                 if end == 1: break
-                                                            if end == 1: break
+                                                            if end == 1:
+                                                                break
                                                         if end == 1:
                                                             break
                                                     if end == 1:
